@@ -55,6 +55,12 @@
     <Compile Include="FileNewForm.Designer.cs">
       <DependentUpon>FileNewForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FileOpenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileOpenForm.Designer.cs">
+      <DependentUpon>FileOpenForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FileNewForm.resx">
       <DependentUpon>FileNewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileOpenForm.resx">
+      <DependentUpon>FileOpenForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

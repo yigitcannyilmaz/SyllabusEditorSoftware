@@ -36,5 +36,11 @@ namespace SyllabusEditor
             
             
         }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FileOpenForm fileOpenForm = new FileOpenForm();
+            fileOpenForm.Show();
+        }
     }
 }

@@ -32,6 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button2 = new System.Windows.Forms.Button();
+            this.listedSyllabus = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -67,11 +68,20 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // listedSyllabus
+            // 
+            this.listedSyllabus.FormattingEnabled = true;
+            this.listedSyllabus.Location = new System.Drawing.Point(225, 307);
+            this.listedSyllabus.Name = "listedSyllabus";
+            this.listedSyllabus.Size = new System.Drawing.Size(563, 134);
+            this.listedSyllabus.TabIndex = 3;
+            // 
             // FileNewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listedSyllabus);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
@@ -87,5 +97,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ListBox listedSyllabus;
     }
 }

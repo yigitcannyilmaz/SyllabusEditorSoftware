@@ -49,6 +49,25 @@ namespace SyllabusEditor
                 successPopupNotifier.ContentText = "Successfully Saved";
                 successPopupNotifier.Popup();
             }
+
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                listFiles.Items.Clear();
+                string[] files = Directory.GetFiles(folderBrowserDialog.SelectedPath);
+                string[] directions = Directory.GetDirectories(folderBrowserDialog.SelectedPath);
+
+                foreach (string file in files)
+                {
+                    listFiles.Items.Add(file);
+                }
+                foreach (string direction in directions)
+                {
+                    listFiles.Items.Add(direction);
+                }
+
+            }
         }
     }
 }

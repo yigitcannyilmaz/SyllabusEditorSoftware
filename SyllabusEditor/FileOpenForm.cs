@@ -39,13 +39,6 @@ namespace SyllabusEditor
             htmlOutputTextBox.Text = streamReader.ReadToEnd();
             streamReader.Close();
             
-            
-            
-
-
-
-
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -55,6 +48,7 @@ namespace SyllabusEditor
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //TO DO get highlighted text and save them DB or txt.
             string[] words = searchTextBox.Text.Split(',');
             foreach (string word in words)
             {

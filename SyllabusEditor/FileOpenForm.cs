@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.IO;
+
 
 namespace SyllabusEditor
 {
@@ -30,11 +33,57 @@ namespace SyllabusEditor
             String userInputLectureCode = lectureCode.Text;
             string enteredURL = constantURL + userInputFaculty+ "+"+userInputLectureCode ;
             System.Diagnostics.Process.Start(enteredURL);
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(enteredURL);
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            StreamReader streamReader = new StreamReader(response.GetResponseStream());
+            htmlOutputTextBox.Text = streamReader.ReadToEnd();
+            streamReader.Close();
+            
+            
+            
+
+
+
+
 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string[] words = searchTextBox.Text.Split(',');
+            foreach (string word in words)
+            {
+                int startIndex = 0;
+                while (startIndex < htmlOutputTextBox.TextLength)
+                {
+                    int wordStartIndex = htmlOutputTextBox.Find(word,startIndex,RichTextBoxFinds.None);
+                    if (wordStartIndex != -1)
+                    {
+                        htmlOutputTextBox.SelectionStart = wordStartIndex;
+                        htmlOutputTextBox.SelectionLength = word.Length;
+                        htmlOutputTextBox.SelectionBackColor = Color.Yellow;
+
+                    }
+                    else
+                    {
+                        break;
+                    }
+                    startIndex += wordStartIndex + word.Length;
+                }
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            htmlOutputTextBox.SelectionStart = 0;
+            htmlOutputTextBox.SelectAll();
+            htmlOutputTextBox.SelectionBackColor = Color.White;
 
         }
     }

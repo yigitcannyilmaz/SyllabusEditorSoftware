@@ -42,5 +42,11 @@ namespace SyllabusEditor
             FileOpenForm fileOpenForm = new FileOpenForm();
             fileOpenForm.Show();
         }
+
+        private void ımportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Import import = new Import();
+            import.Show();
+        }
     }
 }

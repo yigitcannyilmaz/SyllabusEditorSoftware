@@ -444,6 +444,15 @@ namespace SyllabusEditor
             ntotalGrade = textBox156.Text;
             wtotalGrade = textBox157.Text;
 
+            label290.Text = nfinalGrade;
+            label291.Text = wfinalGrade;
+            label292.Text = nendFinalGrade;
+            label293.Text = wendFinalGrade;
+            label294.Text = ntotalGrade;
+            label295.Text = wtotalGrade;
+
+
+
             ncourseHours = textBox158.Text;
             nlabHours = textBox159.Text;
             nstudyHours = textBox160.Text;

@@ -46,7 +46,7 @@ namespace SyllabusEditor
             var htmlDoc = new HtmlAgilityPack.HtmlDocument();
             htmlDoc.LoadHtml(htmlData);
 
-           /* WebRequest connectionRequest = HttpWebRequest.Create(url);
+           /*  WebRequest connectionRequest = HttpWebRequest.Create(url);
             WebResponse reqResponse = connectionRequest.GetResponse();
             StreamReader readResponse = new StreamReader(reqResponse.GetResponseStream());
             string sourceCode= readResponse.ReadToEnd();

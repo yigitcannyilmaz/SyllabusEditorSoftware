@@ -109,6 +109,8 @@ namespace SyllabusEditor
             int tableOneTChk= 0;
             foreach (var tableOneT in HTMLTableList)
             {
+                tableOneTCtr++;
+
                 string element = tableOneT.Cell_Text.ToString().Replace("&uuml;", "ü").Replace("&nbsp;", string.Empty).Replace("&ouml;", "ö");
                 if (tableOneTCtr == 1)
                 {
@@ -120,7 +122,6 @@ namespace SyllabusEditor
                     textboxArray[tableOneTChk].Text = element.Trim();
                     tableOneTChk++;
                 }
-                tableOneTCtr++;
                 if (tableOneTChk == 9)
                     break;
             }
@@ -232,19 +233,132 @@ namespace SyllabusEditor
             }
 
 
-
-
-
-
-           
-
+            int tableSixCtr = 0;
+            int tableSixTest = 1;
+            int tableSixChk = 0;
+            int tableSixChkSec = 0;
+            int tableSixTestSec = 0;
+            int tableSixTestThird = 0;
+            int tableSixChkThird = 0;
+          
+            var inputArray = new[] { label24, label25, label26, label27, label28, label29, label30, label31, label32, label33, label34, label35, label36, label37, label38, label39, label40 };
+            var inputTextArray = new[] { textBox15, textBox16, textBox17, textBox18, textBox19, textBox20, textBox21, textBox22, textBox23, textBox24, textBox25, textBox26, textBox27, textBox28, textBox29, textBox30 };
+            var inputTextArraySec = new[] {  textBox31, textBox32, textBox33, textBox34, textBox35, textBox36, textBox37, textBox38, textBox39, textBox40, textBox41, textBox42, textBox43, textBox44, textBox45, textBox46 };
             
+            
+            foreach (var tableSix in HTMLTableList)
+            {
+
+                string element = tableSix.Cell_Text.ToString().Replace("&uuml;", "ü").Replace("&nbsp;", string.Empty).Replace("&ouml;", "ö");
+                tableSixCtr++;
+
+                if (tableSixCtr >= 48)
+                {
+                    if (tableSixTest == 1)
+                    {
+                        inputArray[tableSixChk].Text = element.Trim();
+                        tableSixTest++;
+                        tableSixChk++;
+                        continue;
+                    }
+                    if (tableSixTest == 2)
+                    {
+                        if (tableSixTestSec == 0)
+                        {
+                            label41.Text = element.Trim();
+                            tableSixTestSec++;
+                            tableSixTest++;
+                            continue;
+                        }
+                        inputTextArray[tableSixChkSec].Text = element.Trim();
+                        tableSixChkSec++;
+                        tableSixTest++;
+                        continue;
+                    }
+                    if (tableSixTest == 3)
+                    {
+                        if (tableSixTestThird== 0)
+                        {
+                            label42.Text = element.Trim();
+                            tableSixTestThird++;
+                            tableSixTest = 1;
+                            continue;
+                        }
+                        inputTextArraySec[tableSixChkThird].Text = element.Trim();
+                        tableSixChkThird++;
+                        tableSixTest = 1;
+                    }
+                }
+                if (tableSixCtr == 98)
+                    break;
+            }
+
+
+            var newlabelList = new[] { label43, label44 };
+            var newtextList = new[] { richTextBox4, richTextBox5 };
+
+            int tableSevenChk = 0;
+            int tableSevenCtr = 0;
+
+            foreach (var newtable in HTMLTableList)
+            {
+                string element = newtable.Cell_Text.ToString().Replace("&uuml;", "ü").Replace("&nbsp;", string.Empty).Replace("&ouml;", "ö");
+                tableSevenCtr++;
+                if (tableSevenCtr > 98)
+                {
+
+                    if (tableSevenCtr % 2 == 1)
+                    { 
+                        newlabelList[tableSevenChk].Text = element.Trim();
+                    }
+                    else
+                    {
+                        newtextList[tableSevenChk].Text = element.Trim();
+                        tableSevenChk++;
+                    }
+                    if (tableSevenChk > 1)
+                    {
+                        break;
+                    }
+                }
+            }
+
+
+
+
+
+
+
+
+
 
         }
+
+
+
+
+
+
 
         private void Import_Load(object sender, EventArgs e)
         {
             LanguageComboBox.SelectedIndex = 0;
+            WindowState = FormWindowState.Maximized;
+        }
+
+        private void textBox32_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox31_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox34_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

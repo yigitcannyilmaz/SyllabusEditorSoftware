@@ -243,7 +243,7 @@ namespace SyllabusEditor
           
             var inputArray = new[] { label24, label25, label26, label27, label28, label29, label30, label31, label32, label33, label34, label35, label36, label37, label38, label39, label40 };
             var inputTextArray = new[] { textBox15, textBox16, textBox17, textBox18, textBox19, textBox20, textBox21, textBox22, textBox23, textBox24, textBox25, textBox26, textBox27, textBox28, textBox29, textBox30 };
-            var inputTextArraySec = new[] {  textBox31, textBox32, textBox33, textBox34, textBox35, textBox36, textBox37, textBox38, textBox39, textBox40, textBox41, textBox42, textBox43, textBox44, textBox45, textBox46 };
+            var inputTextArraySec = new[] {  textBox31, textBox32, textBox33, textBox34, textBox35, textBox36, textBox37, textBox38, textBox39 , textBox40, textBox41, textBox42, textBox43, textBox44, textBox45, textBox46 };
             
             
             foreach (var tableSix in HTMLTableList)

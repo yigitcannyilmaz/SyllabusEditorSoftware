@@ -132,5 +132,9 @@
   <ItemGroup>
     <None Include="Resources\ıeu.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Files\trDefaultSyllabus.html" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

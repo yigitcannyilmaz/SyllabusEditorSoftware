@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace SyllabusEditor
 {
@@ -593,5 +594,50 @@ namespace SyllabusEditor
 
         }
 
+        private void exportHTMLButton_Click(object sender, EventArgs e)
+        {
+            Assembly asm = Assembly.GetExecutingAssembly();
+            const string trSyllabusHTML = "SyllabusEditor.Files.trDefaultSyllabus.html";
+            const string enSyllabusHTML = "SyllabusEditor.Files.Default.html";
+
+            using (Stream stream = asm.GetManifestResourceStream(trSyllabusHTML))
+            {
+
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    textBox221.Text = reader.ReadToEnd();
+                }
+            }
+            var document2 = new HtmlAgilityPack.HtmlDocument();
+            document2.LoadHtml(textBox221.Text);
+
+            string courseNameWord = "";
+            var words = document2.DocumentNode?.SelectNodes("//*[@id='course_name']")?.Select(x => x.InnerText);
+            courseNameWord += words != null ? string.Join(" ", words) : String.Empty;
+            textBox222.Text = courseNameWord.Trim();
+            string html = textBox221.Text;
+            string yHtml = "";
+            yHtml = html.Replace(textBox222.Text, name_textBox.Text);
+            textBox222.Text = yHtml;
+
+            string courseCodeWord = "";
+            words = document2.DocumentNode?.SelectNodes("//*[@id='course_code']")?.Select(x => x.InnerText);
+            courseCodeWord += words != null ? string.Join(" ", words) : String.Empty;
+            textBox222.Text = courseCodeWord.Trim();
+            yHtml = yHtml.Replace(textBox222.Text, code_textBox.Text);
+            textBox222.Text = yHtml;
+
+            //TO DO Cont.
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                using (Stream save = File.Open(saveFileDialog.FileName, FileMode.OpenOrCreate))
+                using (StreamWriter streamWriter = new StreamWriter(save))
+                {
+                    streamWriter.Write(textBox222.Text);
+                }
+            }
+        }
     }
 }

@@ -329,6 +329,89 @@ namespace SyllabusEditor
 
 
 
+            int tableEightCtr = 0;
+            int tableEightTest = 0;
+            int tableEightTestSec = 0;
+            int tableEightChk = 0;
+            int tableEightChkSec = 0;
+            int tableEightChkThird = 0;
+            int tableEightTestThird = 0;
+
+
+            var labelArrayTableEight = new[] {label45, label46, label47, label48, label49, label50, label51, label52, label53, label54, label55, label56, label57 };
+            var textboxArrayTableEight = new[] { textBox47, textBox48, textBox49, textBox50, textBox51, textBox52, textBox53, textBox54, textBox55, textBox56, textBox57, textBox58 };
+            var textboxArrayTableEightSec = new[] { textBox59, textBox60, textBox61, textBox62, textBox63, textBox64, textBox65, textBox66, textBox67, textBox68, textBox69, textBox70 };
+
+            foreach (var tableEight in HTMLTableList)
+            {
+
+                string element = tableEight.Cell_Text.ToString().Replace("&uuml;", "ü").Replace("&nbsp;", string.Empty).Replace("&ouml;", "ö");
+                tableEightCtr++;
+
+                if (tableEightCtr > 102)
+                {
+                    if (tableEightTest == 0)
+                    {
+                        labelArrayTableEight[tableEightChk].Text = element.Trim();
+                        tableEightTest++;
+                        tableEightChk++;
+                        continue;
+                    }
+                    if (tableEightTest == 1)
+                    {
+                        if (tableEightTestSec == 0)
+                        {
+                            label58.Text = element.Trim();
+                            tableEightTestSec++;
+                            tableEightTest++;
+                            continue;
+                        }
+                        textboxArrayTableEight[tableEightChkSec].Text = element.Trim();
+                        tableEightChkSec++;
+                        tableEightTest++;
+                        continue;
+                    }
+                    if (tableEightTest == 2)
+                    {
+                        if (tableEightTestThird == 0)
+                        {
+                            label59.Text = element.Trim();
+                            tableEightTestThird++;
+                            tableEightTest = 0;
+                            continue;
+                        }
+                        textboxArrayTableEightSec[tableEightChkThird].Text = element.Trim();
+                        tableEightChkThird++;
+                        tableEightTest = 0;
+                    }
+                }
+                if (tableEightCtr == 141)
+                    break;
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

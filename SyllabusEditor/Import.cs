@@ -110,7 +110,6 @@ namespace SyllabusEditor
             int tableOneTChk = 0;
             foreach (var tableOneT in HTMLTableList)
             {
-                tableOneTCtr++;
 
                 string element = tableOneT.Cell_Text.ToString().Replace("&uuml;", "ü").Replace("&nbsp;", string.Empty).Replace("&ouml;", "ö");
                 if (tableOneTCtr == 1)
@@ -122,7 +121,10 @@ namespace SyllabusEditor
                 {
                     textboxArray[tableOneTChk].Text = element.Trim();
                     tableOneTChk++;
+
                 }
+                tableOneTCtr++;
+
                 if (tableOneTChk == 9)
                     break;
             }

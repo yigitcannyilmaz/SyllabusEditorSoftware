@@ -1102,7 +1102,7 @@ namespace SyllabusEditor
             // ExportTxtButton
             // 
             this.ExportTxtButton.Location = new System.Drawing.Point(749, 840);
-            this.ExportTxtButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ExportTxtButton.Margin = new System.Windows.Forms.Padding(4);
             this.ExportTxtButton.Name = "ExportTxtButton";
             this.ExportTxtButton.Size = new System.Drawing.Size(123, 28);
             this.ExportTxtButton.TabIndex = 106;
@@ -1113,7 +1113,7 @@ namespace SyllabusEditor
             // ExportHtmlButton
             // 
             this.ExportHtmlButton.Location = new System.Drawing.Point(880, 840);
-            this.ExportHtmlButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ExportHtmlButton.Margin = new System.Windows.Forms.Padding(4);
             this.ExportHtmlButton.Name = "ExportHtmlButton";
             this.ExportHtmlButton.Size = new System.Drawing.Size(123, 28);
             this.ExportHtmlButton.TabIndex = 107;
@@ -1124,7 +1124,7 @@ namespace SyllabusEditor
             // MainHTMLTxtBox
             // 
             this.MainHTMLTxtBox.Location = new System.Drawing.Point(1041, 939);
-            this.MainHTMLTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MainHTMLTxtBox.Margin = new System.Windows.Forms.Padding(4);
             this.MainHTMLTxtBox.Name = "MainHTMLTxtBox";
             this.MainHTMLTxtBox.Size = new System.Drawing.Size(12, 22);
             this.MainHTMLTxtBox.TabIndex = 108;
@@ -1133,7 +1133,7 @@ namespace SyllabusEditor
             // defaultTxtBox
             // 
             this.defaultTxtBox.Location = new System.Drawing.Point(1041, 940);
-            this.defaultTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.defaultTxtBox.Margin = new System.Windows.Forms.Padding(4);
             this.defaultTxtBox.Name = "defaultTxtBox";
             this.defaultTxtBox.Size = new System.Drawing.Size(12, 22);
             this.defaultTxtBox.TabIndex = 109;
@@ -1281,6 +1281,7 @@ namespace SyllabusEditor
             this.textBox47.Name = "textBox47";
             this.textBox47.Size = new System.Drawing.Size(100, 22);
             this.textBox47.TabIndex = 128;
+            this.textBox47.TextChanged += new System.EventHandler(this.textBox47_TextChanged);
             // 
             // textBox48
             // 
@@ -1288,6 +1289,7 @@ namespace SyllabusEditor
             this.textBox48.Name = "textBox48";
             this.textBox48.Size = new System.Drawing.Size(100, 22);
             this.textBox48.TabIndex = 129;
+            this.textBox48.TextChanged += new System.EventHandler(this.textBox48_TextChanged);
             // 
             // textBox49
             // 
@@ -1295,6 +1297,7 @@ namespace SyllabusEditor
             this.textBox49.Name = "textBox49";
             this.textBox49.Size = new System.Drawing.Size(100, 22);
             this.textBox49.TabIndex = 130;
+            this.textBox49.TextChanged += new System.EventHandler(this.textBox49_TextChanged);
             // 
             // textBox50
             // 
@@ -1302,6 +1305,7 @@ namespace SyllabusEditor
             this.textBox50.Name = "textBox50";
             this.textBox50.Size = new System.Drawing.Size(100, 22);
             this.textBox50.TabIndex = 131;
+            this.textBox50.TextChanged += new System.EventHandler(this.textBox50_TextChanged);
             // 
             // textBox51
             // 
@@ -1309,6 +1313,7 @@ namespace SyllabusEditor
             this.textBox51.Name = "textBox51";
             this.textBox51.Size = new System.Drawing.Size(100, 22);
             this.textBox51.TabIndex = 132;
+            this.textBox51.TextChanged += new System.EventHandler(this.textBox51_TextChanged);
             // 
             // textBox52
             // 
@@ -1316,6 +1321,7 @@ namespace SyllabusEditor
             this.textBox52.Name = "textBox52";
             this.textBox52.Size = new System.Drawing.Size(100, 22);
             this.textBox52.TabIndex = 133;
+            this.textBox52.TextChanged += new System.EventHandler(this.textBox52_TextChanged);
             // 
             // textBox53
             // 
@@ -1323,6 +1329,7 @@ namespace SyllabusEditor
             this.textBox53.Name = "textBox53";
             this.textBox53.Size = new System.Drawing.Size(100, 22);
             this.textBox53.TabIndex = 134;
+            this.textBox53.TextChanged += new System.EventHandler(this.textBox53_TextChanged);
             // 
             // textBox54
             // 
@@ -1330,6 +1337,7 @@ namespace SyllabusEditor
             this.textBox54.Name = "textBox54";
             this.textBox54.Size = new System.Drawing.Size(100, 22);
             this.textBox54.TabIndex = 135;
+            this.textBox54.TextChanged += new System.EventHandler(this.textBox54_TextChanged);
             // 
             // textBox55
             // 
@@ -1337,6 +1345,7 @@ namespace SyllabusEditor
             this.textBox55.Name = "textBox55";
             this.textBox55.Size = new System.Drawing.Size(100, 22);
             this.textBox55.TabIndex = 136;
+            this.textBox55.TextChanged += new System.EventHandler(this.textBox55_TextChanged);
             // 
             // textBox56
             // 
@@ -1344,6 +1353,7 @@ namespace SyllabusEditor
             this.textBox56.Name = "textBox56";
             this.textBox56.Size = new System.Drawing.Size(100, 22);
             this.textBox56.TabIndex = 137;
+            this.textBox56.TextChanged += new System.EventHandler(this.textBox56_TextChanged);
             // 
             // textBox57
             // 
@@ -1351,6 +1361,7 @@ namespace SyllabusEditor
             this.textBox57.Name = "textBox57";
             this.textBox57.Size = new System.Drawing.Size(100, 22);
             this.textBox57.TabIndex = 138;
+            this.textBox57.TextChanged += new System.EventHandler(this.textBox57_TextChanged);
             // 
             // textBox58
             // 
@@ -1365,6 +1376,7 @@ namespace SyllabusEditor
             this.textBox59.Name = "textBox59";
             this.textBox59.Size = new System.Drawing.Size(100, 22);
             this.textBox59.TabIndex = 140;
+            this.textBox59.TextChanged += new System.EventHandler(this.textBox59_TextChanged);
             // 
             // textBox60
             // 
@@ -1372,6 +1384,7 @@ namespace SyllabusEditor
             this.textBox60.Name = "textBox60";
             this.textBox60.Size = new System.Drawing.Size(100, 22);
             this.textBox60.TabIndex = 141;
+            this.textBox60.TextChanged += new System.EventHandler(this.textBox60_TextChanged);
             // 
             // textBox61
             // 
@@ -1379,6 +1392,7 @@ namespace SyllabusEditor
             this.textBox61.Name = "textBox61";
             this.textBox61.Size = new System.Drawing.Size(100, 22);
             this.textBox61.TabIndex = 142;
+            this.textBox61.TextChanged += new System.EventHandler(this.textBox61_TextChanged);
             // 
             // textBox62
             // 
@@ -1386,6 +1400,7 @@ namespace SyllabusEditor
             this.textBox62.Name = "textBox62";
             this.textBox62.Size = new System.Drawing.Size(100, 22);
             this.textBox62.TabIndex = 143;
+            this.textBox62.TextChanged += new System.EventHandler(this.textBox62_TextChanged);
             // 
             // textBox63
             // 
@@ -1393,6 +1408,7 @@ namespace SyllabusEditor
             this.textBox63.Name = "textBox63";
             this.textBox63.Size = new System.Drawing.Size(100, 22);
             this.textBox63.TabIndex = 144;
+            this.textBox63.TextChanged += new System.EventHandler(this.textBox63_TextChanged);
             // 
             // textBox64
             // 
@@ -1400,6 +1416,7 @@ namespace SyllabusEditor
             this.textBox64.Name = "textBox64";
             this.textBox64.Size = new System.Drawing.Size(100, 22);
             this.textBox64.TabIndex = 145;
+            this.textBox64.TextChanged += new System.EventHandler(this.textBox64_TextChanged);
             // 
             // textBox65
             // 
@@ -1407,6 +1424,7 @@ namespace SyllabusEditor
             this.textBox65.Name = "textBox65";
             this.textBox65.Size = new System.Drawing.Size(100, 22);
             this.textBox65.TabIndex = 146;
+            this.textBox65.TextChanged += new System.EventHandler(this.textBox65_TextChanged);
             // 
             // textBox66
             // 
@@ -1414,6 +1432,7 @@ namespace SyllabusEditor
             this.textBox66.Name = "textBox66";
             this.textBox66.Size = new System.Drawing.Size(100, 22);
             this.textBox66.TabIndex = 147;
+            this.textBox66.TextChanged += new System.EventHandler(this.textBox66_TextChanged);
             // 
             // textBox67
             // 
@@ -1421,6 +1440,7 @@ namespace SyllabusEditor
             this.textBox67.Name = "textBox67";
             this.textBox67.Size = new System.Drawing.Size(100, 22);
             this.textBox67.TabIndex = 148;
+            this.textBox67.TextChanged += new System.EventHandler(this.textBox67_TextChanged);
             // 
             // textBox68
             // 
@@ -1428,6 +1448,7 @@ namespace SyllabusEditor
             this.textBox68.Name = "textBox68";
             this.textBox68.Size = new System.Drawing.Size(100, 22);
             this.textBox68.TabIndex = 149;
+            this.textBox68.TextChanged += new System.EventHandler(this.textBox68_TextChanged);
             // 
             // textBox69
             // 
@@ -1435,6 +1456,7 @@ namespace SyllabusEditor
             this.textBox69.Name = "textBox69";
             this.textBox69.Size = new System.Drawing.Size(100, 22);
             this.textBox69.TabIndex = 150;
+            this.textBox69.TextChanged += new System.EventHandler(this.textBox69_TextChanged);
             // 
             // textBox70
             // 

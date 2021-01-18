@@ -1075,7 +1075,7 @@ namespace SyllabusEditor
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(449, 647);
+            this.label44.Location = new System.Drawing.Point(449, 667);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(54, 17);
             this.label44.TabIndex = 103;
@@ -1083,21 +1083,22 @@ namespace SyllabusEditor
             // 
             // richTextBox4
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(558, 567);
+            this.richTextBox4.Location = new System.Drawing.Point(452, 591);
             this.richTextBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(290, 58);
+            this.richTextBox4.Size = new System.Drawing.Size(396, 58);
             this.richTextBox4.TabIndex = 104;
             this.richTextBox4.Text = "";
             // 
             // richTextBox5
             // 
-            this.richTextBox5.Location = new System.Drawing.Point(558, 644);
+            this.richTextBox5.Location = new System.Drawing.Point(452, 688);
             this.richTextBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(290, 58);
+            this.richTextBox5.Size = new System.Drawing.Size(396, 58);
             this.richTextBox5.TabIndex = 105;
             this.richTextBox5.Text = "";
+            this.richTextBox5.TextChanged += new System.EventHandler(this.richTextBox5_TextChanged);
             // 
             // ExportTxtButton
             // 
@@ -1256,6 +1257,7 @@ namespace SyllabusEditor
             this.label57.Size = new System.Drawing.Size(54, 17);
             this.label57.TabIndex = 125;
             this.label57.Text = "label57";
+            this.label57.Visible = false;
             // 
             // label58
             // 
@@ -1369,6 +1371,7 @@ namespace SyllabusEditor
             this.textBox58.Name = "textBox58";
             this.textBox58.Size = new System.Drawing.Size(100, 22);
             this.textBox58.TabIndex = 139;
+            this.textBox58.Visible = false;
             // 
             // textBox59
             // 
@@ -1464,6 +1467,7 @@ namespace SyllabusEditor
             this.textBox70.Name = "textBox70";
             this.textBox70.Size = new System.Drawing.Size(100, 22);
             this.textBox70.TabIndex = 151;
+            this.textBox70.Visible = false;
             // 
             // Import
             // 

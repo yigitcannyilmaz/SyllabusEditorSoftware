@@ -17,31 +17,35 @@ namespace SyllabusEditor
     
     public partial class Import : Form
     {
+        //This code piece can calculate evaluation systems total number and weighting values but it does not work with every courses because of html codes are not proper.
+        //So, we ignored it.
 
-        public int textBoxTotalCalc(string type)
-        {
-            var textBoxesToSum = new[] { textBox47, textBox48, textBox49, textBox50, textBox51, textBox52, textBox53, textBox54, textBox55, textBox56, textBox57 };
+        //public int textBoxTotalCalc(string type)
+        //{
+            
+        //    var textBoxesToSum = new[] { textBox47, textBox48, textBox49, textBox50, textBox51, textBox52, textBox53, textBox54, textBox55, textBox56, textBox57 };
 
-            int summation = 0;
-            if (type == "number")
-            {
-              textBoxesToSum = new[] { textBox47, textBox48, textBox49, textBox50, textBox51, textBox52, textBox53, textBox54, textBox55, textBox56, textBox57 };
-            }
-            else if (type == "weighting") {
+        //    int summation = 0;
+        //    if (type == "number")
+        //    {
+        //      textBoxesToSum = new[] { textBox47, textBox48, textBox49, textBox50, textBox51, textBox52, textBox53, textBox54, textBox55, textBox56, textBox57 };
+        //    }
+        //    else if (type == "weighting") {
 
-              textBoxesToSum = new[] { textBox59, textBox60, textBox61, textBox62, textBox63, textBox64, textBox65, textBox66, textBox67, textBox68, textBox69};
+        //      textBoxesToSum = new[] { textBox59, textBox60, textBox61, textBox62, textBox63, textBox64, textBox65, textBox66, textBox67, textBox68, textBox69};
 
-            }
+        //    }
 
-            foreach (var textbBoxVal in textBoxesToSum) {
-                if (textbBoxVal.Text.Length > 0)
-                {
-                    summation += int.Parse(textbBoxVal.Text);
-                }
-            }
+        //    foreach (var textbBoxVal in textBoxesToSum) {
+        //        if (textbBoxVal.Text.Length > 0)
+        //        {
+        //            summation += int.Parse(textbBoxVal.Text);
+        //        }
+        //    }
 
-            return summation;
-        }
+        //    return summation;
+            
+        //}
 
        
         
@@ -444,8 +448,8 @@ namespace SyllabusEditor
 
 
 
-            textBox70.Text = textBoxTotalCalc("weighting").ToString();
-            textBox58.Text = textBoxTotalCalc("number").ToString();
+            //textBox70.Text = textBoxTotalCalc("weighting").ToString();
+            //textBox58.Text = textBoxTotalCalc("number").ToString();
 
 
 
@@ -670,133 +674,124 @@ namespace SyllabusEditor
 
         }
 
-      
+
+        //This code piece can calculate evaluation systems total number and weighting values but it does not work with every courses because of html codes are not proper.
+        //So, we ignored it.
         private void textBox47_TextChanged(object sender, EventArgs e)
         {
-            textBox58.Text = textBoxTotalCalc("number").ToString();
+            //textBox58.Text = textBoxTotalCalc("number").ToString();
         }
 
         private void textBox48_TextChanged(object sender, EventArgs e)
         {
-            textBox58.Text = textBoxTotalCalc("number").ToString();
+            //textBox58.Text = textBoxTotalCalc("number").ToString();
         }
 
         private void textBox49_TextChanged(object sender, EventArgs e)
         {
-            textBox58.Text = textBoxTotalCalc("number").ToString();
-
+            //textBox58.Text = textBoxTotalCalc("number").ToString();
         }
 
         private void textBox56_TextChanged(object sender, EventArgs e)
         {
-            textBox58.Text = textBoxTotalCalc("number").ToString();
-
+            //textBox58.Text = textBoxTotalCalc("number").ToString();
         }
 
         private void textBox55_TextChanged(object sender, EventArgs e)
         {
-            textBox58.Text = textBoxTotalCalc("number").ToString();
+            //textBox58.Text = textBoxTotalCalc("number").ToString();
 
         }
 
         private void textBox54_TextChanged(object sender, EventArgs e)
         {
-            textBox58.Text = textBoxTotalCalc("number").ToString();
-
+            //textBox58.Text = textBoxTotalCalc("number").ToString();
         }
 
         private void textBox53_TextChanged(object sender, EventArgs e)
         {
-            textBox58.Text = textBoxTotalCalc("number").ToString();
-
+            //textBox58.Text = textBoxTotalCalc("number").ToString();
         }
 
         private void textBox52_TextChanged(object sender, EventArgs e)
         {
-            textBox58.Text = textBoxTotalCalc("number").ToString();
-
+            //textBox58.Text = textBoxTotalCalc("number").ToString();
         }
 
         private void textBox51_TextChanged(object sender, EventArgs e)
         {
-            textBox58.Text = textBoxTotalCalc("number").ToString();
-
+            //textBox58.Text = textBoxTotalCalc("number").ToString();
         }
 
         private void textBox50_TextChanged(object sender, EventArgs e)
         {
-            textBox58.Text = textBoxTotalCalc("number").ToString();
-
+            //textBox58.Text = textBoxTotalCalc("number").ToString();
         }
 
         private void textBox57_TextChanged(object sender, EventArgs e)
         {
-            textBox58.Text = textBoxTotalCalc("number").ToString();
+            //textBox58.Text = textBoxTotalCalc("number").ToString();
 
         }
 
         private void textBox63_TextChanged(object sender, EventArgs e)
         {
-            textBox70.Text = textBoxTotalCalc("weighting").ToString();
+            //textBox70.Text = textBoxTotalCalc("weighting").ToString();
         }
 
         private void textBox68_TextChanged(object sender, EventArgs e)
         {
-            textBox70.Text = textBoxTotalCalc("weighting").ToString();
-
+            //textBox70.Text = textBoxTotalCalc("weighting").ToString();
         }
 
         private void textBox67_TextChanged(object sender, EventArgs e)
         {
-            textBox70.Text = textBoxTotalCalc("weighting").ToString();
-
+            //textBox70.Text = textBoxTotalCalc("weighting").ToString();
         }
 
         private void textBox66_TextChanged(object sender, EventArgs e)
         {
-            textBox70.Text = textBoxTotalCalc("weighting").ToString();
+            //textBox70.Text = textBoxTotalCalc("weighting").ToString();
 
         }
 
         private void textBox65_TextChanged(object sender, EventArgs e)
         {
-            textBox70.Text = textBoxTotalCalc("weighting").ToString();
-
+            //textBox70.Text = textBoxTotalCalc("weighting").ToString();
         }
 
         private void textBox64_TextChanged(object sender, EventArgs e)
         {
-            textBox70.Text = textBoxTotalCalc("weighting").ToString();
-
+            //textBox70.Text = textBoxTotalCalc("weighting").ToString();
         }
 
         private void textBox69_TextChanged(object sender, EventArgs e)
         {
-            textBox70.Text = textBoxTotalCalc("weighting").ToString();
-
+            //textBox70.Text = textBoxTotalCalc("weighting").ToString();
         }
 
         private void textBox62_TextChanged(object sender, EventArgs e)
         {
-            textBox70.Text = textBoxTotalCalc("weighting").ToString();
-
+            //textBox70.Text = textBoxTotalCalc("weighting").ToString();
         }
 
         private void textBox61_TextChanged(object sender, EventArgs e)
         {
-            textBox70.Text = textBoxTotalCalc("weighting").ToString();
-
+            //textBox70.Text = textBoxTotalCalc("weighting").ToString();
         }
 
         private void textBox60_TextChanged(object sender, EventArgs e)
         {
-            textBox70.Text = textBoxTotalCalc("weighting").ToString();
-
+            //textBox70.Text = textBoxTotalCalc("weighting").ToString();
         }
 
         private void textBox59_TextChanged(object sender, EventArgs e)
         {
-            textBox70.Text = textBoxTotalCalc("weighting").ToString();
+            //textBox70.Text = textBoxTotalCalc("weighting").ToString();
+        }
+
+        private void richTextBox5_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

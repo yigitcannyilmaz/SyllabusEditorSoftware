@@ -617,17 +617,120 @@ namespace SyllabusEditor
             textBox222.Text = courseNameWord.Trim();
             string html = textBox221.Text;
             string yHtml = "";
-            yHtml = html.Replace(textBox222.Text, name_textBox.Text);
+            yHtml = html.Replace(textBox222.Text, label3.Text);
             textBox222.Text = yHtml;
 
             string courseCodeWord = "";
             words = document2.DocumentNode?.SelectNodes("//*[@id='course_code']")?.Select(x => x.InnerText);
             courseCodeWord += words != null ? string.Join(" ", words) : String.Empty;
             textBox222.Text = courseCodeWord.Trim();
-            yHtml = yHtml.Replace(textBox222.Text, code_textBox.Text);
+            yHtml = yHtml.Replace(textBox222.Text, label5.Text);
             textBox222.Text = yHtml;
 
-            //TO DO Cont.
+            string courseSemesterWord = "";
+            words = document2.DocumentNode?.SelectNodes("//*[@id='semester']")?.Select(x => x.InnerText);
+            courseSemesterWord += words != null ? string.Join(" ", words) : String.Empty;
+            textBox222.Text = courseSemesterWord.Trim();
+            yHtml = yHtml.Replace(textBox222.Text, label7.Text);
+            textBox222.Text = yHtml;
+
+            string courseWeeklyHourWord = "";
+            words = document2.DocumentNode?.SelectNodes("//*[@id='weekly_hours']")?.Select(x => x.InnerText);
+            courseWeeklyHourWord += words != null ? string.Join(" ", words) : String.Empty;
+            textBox222.Text = courseWeeklyHourWord.Trim();
+            yHtml = yHtml.Replace(textBox222.Text, label12.Text);
+            textBox222.Text = yHtml;
+
+            string courseAppHoursWord = "";
+            words = document2.DocumentNode?.SelectNodes("//*[@id='app_hours']")?.Select(x => x.InnerText);
+            courseAppHoursWord += words != null ? string.Join(" ", words) : String.Empty;
+            textBox222.Text = courseAppHoursWord.Trim();
+            yHtml = yHtml.Replace(textBox222.Text, label13.Text);
+            textBox222.Text = yHtml;
+
+            string courseIEUCredit = "";
+            words = document2.DocumentNode?.SelectNodes("//*[@id='ieu_credit']")?.Select(x => x.InnerText);
+            courseIEUCredit += words != null ? string.Join(" ", words) : String.Empty;
+            textBox222.Text = courseIEUCredit.Trim();
+            yHtml = yHtml.Replace(textBox222.Text, label14.Text);
+            textBox222.Text = yHtml;
+
+            string courseECTSCredit = "";
+            words = document2.DocumentNode?.SelectNodes("//*[@id='ects_credit']")?.Select(x => x.InnerText);
+            courseECTSCredit += words != null ? string.Join(" ", words) : String.Empty;
+            textBox222.Text = courseECTSCredit.Trim();
+            yHtml = yHtml.Replace(textBox222.Text, label15.Text);
+            textBox222.Text = yHtml;
+
+            string coursePrereq = "";
+            words = document2.DocumentNode?.SelectNodes("//*[@id='pre_requisites']")?.Select(x => x.InnerText);
+            coursePrereq += words != null ? string.Join(" ", words) : String.Empty;
+            textBox222.Text = coursePrereq.Trim();
+            yHtml = yHtml.Replace(textBox222.Text, label31.Text);
+            textBox222.Text = yHtml;
+
+            string course_lang = "";
+            words = document2.DocumentNode?.SelectNodes("//*[@id='course_lang']")?.Select(x => x.InnerText);
+            course_lang += words != null ? string.Join(" ", words) : String.Empty;
+            textBox222.Text = course_lang.Trim();
+            yHtml = yHtml.Replace(textBox222.Text, label32.Text);
+            textBox222.Text = yHtml;
+
+            string courseType = "";
+            words = document2.DocumentNode?.SelectNodes("//*[@id='course_type']")?.Select(x => x.InnerText);
+            courseType += words != null ? string.Join(" ", words) : String.Empty;
+            textBox222.Text = courseType.Trim();
+            yHtml = yHtml.Replace(textBox222.Text, label33.Text);
+            textBox222.Text = yHtml;
+
+            string courseLevel = "";
+            words = document2.DocumentNode?.SelectNodes("//*[@id='course_level']")?.Select(x => x.InnerText);
+            courseLevel += words != null ? string.Join(" ", words) : String.Empty;
+            textBox222.Text = courseLevel.Trim();
+            yHtml = yHtml.Replace(textBox222.Text, label34.Text);
+            textBox222.Text = yHtml;
+
+            string coordinatorList = "";
+            words = document2.DocumentNode?.SelectNodes("//*[@id='coordinator_list']")?.Select(x => x.InnerText);
+            coordinatorList += words != null ? string.Join(" ", words) : String.Empty;
+            textBox222.Text = coordinatorList.Trim();
+            yHtml = yHtml.Replace(textBox222.Text, label56.Text);
+            textBox222.Text = yHtml;
+
+            string lecturerList = "";
+            words = document2.DocumentNode?.SelectNodes("//*[@id='lecturer_list']")?.Select(x => x.InnerText);
+            lecturerList += words != null ? string.Join(" ", words) : String.Empty;
+            textBox222.Text = lecturerList.Trim();
+            yHtml = yHtml.Replace(textBox222.Text, label57.Text);
+            textBox222.Text = yHtml;
+
+            string yardimciList = "";
+            words = document2.DocumentNode?.SelectNodes("//*[@id='yardimci_list']")?.Select(x => x.InnerText);
+            yardimciList += words != null ? string.Join(" ", words) : String.Empty;
+            textBox222.Text = yardimciList.Trim();
+            yHtml = yHtml.Replace(textBox222.Text, label58.Text);
+            textBox222.Text = yHtml;
+
+            string dersAmac = "";
+            words = document2.DocumentNode?.SelectNodes("//*[@id='dersAmac']")?.Select(x => x.InnerText);
+            dersAmac += words != null ? string.Join(" ", words) : String.Empty;
+            textBox222.Text = dersAmac.Trim();
+            yHtml = yHtml.Replace(textBox222.Text, label41.Text);
+            textBox222.Text = yHtml;
+
+            string outcome = "";
+            words = document2.DocumentNode?.SelectNodes("//*[@id='outcome']")?.Select(x => x.InnerText);
+            outcome += words != null ? string.Join(" ", words) : String.Empty;
+            textBox222.Text = outcome.Trim();
+            yHtml = yHtml.Replace(textBox222.Text, label42.Text);
+            textBox222.Text = yHtml;
+
+            string dersTanım = "";
+            words = document2.DocumentNode?.SelectNodes("//*[@id='dersTanım']")?.Select(x => x.InnerText);
+            dersTanım += words != null ? string.Join(" ", words) : String.Empty;
+            textBox222.Text = dersTanım.Trim();
+            yHtml = yHtml.Replace(textBox222.Text, label43.Text);
+            textBox222.Text = yHtml;
 
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             if (saveFileDialog.ShowDialog() == DialogResult.OK)

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table-responsive {
+            border: 5px outset red;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        sy-label {
+            border: 5px outset red;
+            background-color: lightblue;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>IZMIR UNIVERSITY OF ECONOMICS COURSE OUTLINE FORM</h1>
+    <h2>GENERAL INFORMATION</h2>
+    <br />
+    <div class="table-responsive">
+        <table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered">
+            <tbody>
+                <tr>
+                    <td class="sy-label" style="padding:20px;">
+                        <strong>Course Name</strong>
+                    </td>
+                    <td style="padding:20px;">
+                        <div class="editinput" id="course_name">
+                            İşletim Sistemleri
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br />
+    <div class="table-responsive">
+        <table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered transpose">
+            <tbody>
+                <tr class="sy-label">
+                    <td scope="col">
+                        <div align="center">
+                            <strong>Code</strong>
+                        </div>
+                    </td>
+                    <td scope="col">
+                        <div align="center">
+                            <strong> Semester </strong>
+                        </div>
+                    </td>
+                    <td scope="col">
+                        <div align="center">
+                            <strong>
+                                Theory<br>
+                                (hour/week)
+                            </strong>
+                        </div>
+                    </td>
+                    <td scope="col">
+                        <div align="center">
+                            <strong>
+                                Application/Lab<br>
+                                (hour/week)
+                            </strong>
+                        </div>
+                    </td>
+                    <td scope="col">
+                        <div align="center">
+                            <strong>Local Credits</strong>
+                        </div>
+                    </td>
+                    <td scope="col">
+                        <div align="center"><strong>ECTS</strong></div>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <div align="center" id="course_code">CE 303</div>
+                    </td>
+                    <td>
+                        <div id="semester" class="editinput" align="center">Güz/Bahar </div>
+                    </td>
+                    <td>
+                        <div align="center" id="weekly_hours" class="editinput">3</div>
+                    </td>
+                    <td>
+                        <div align="center" id="app_hours" class="editinput">2</div>
+                    </td>
+                    <td>
+                        <div id="ieu_credit" class="editinput" align="center">4</div>
+                    </td>
+                    <td>
+                        <div id="ects_credit" class="editinput" align="center">8</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <div class="table-responsive">
+            <table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered">
+
+                <tbody>
+                    <tr>
+                        <td style="width:20%" valign="top" class="sy-label">
+                            <strong>Prerequisites</strong>
+                        </td>
+                        <td colspan="6">
+                            <div id="pre_requisites">
+                                <table width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td style="border:none;">&nbsp;</td>
+                                            <td style="border:none;">
+                                                SE 115 Başarılı olmak (En az DD notu almış olmak)
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sy-label">
+                            <strong>Course Language</strong>
+                        </td>
+                        <td>
+                            <div class="editinput" id="course_lang">İngilizce</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sy-label">
+                            <strong>Course Type</strong>
+                        </td>
+                        <td>
+                            <div class="editinput" id="course_type">Servis Dersi</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sy-label">
+                            <strong>Course Level</strong>
+                        </td>
+                        <td>
+                            <div class="editselect" id="course_level">
+                                Lisans
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sy-label">
+                            <strong>Course Coordinator</strong>
+                        </td>
+                        <td>
+                            <ul id="coordinator_list">
+                                <li>Prof. Dr. Turhan TUNALI</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="sy-label">
+                            <strong>Course Lecturer</strong>
+                        </td>
+                        <td>
+                            <ul id="lecturer_list">
+                                <li>Prof. Dr. Turhan TUNALI</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sy-label">
+                            <strong>Assistant(s)</strong>
+                        </td>
+                        <td>
+                            <ul id="yardimci_list">
+                                <li>Araş. Gör. Tugay DİREK</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </br>
+            <table align="center" cellpadding="2" cellspacing="2" class="table table-condensed table-bordered">
+                <tbody>
+                    <tr>
+                        <td style="width:20%" valign="top" class="sy-label">
+                            <strong>Course Objectives</strong>
+                        </td>
+                        <td id = "dersAmac">
+                            Bu dersin amacı bilgisayar mühendisi veya yazılım mühendisi olmak isteyen öğrencilere temel
+                            işletim sistemleri bilgilerini vermektir. Ders süreç yönetimi, veri depolama sistemleri,
+                            giriş/çıkış denetimi konularında kapsamlı bir giriş sağlar. İş parçacığı programlama
+                            laboratuvar çalışmaları ile birlikte incelenir.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="sy-label">
+                            <strong>Learning Outcomes</strong>
+                        </td>
+                        <td>
+                            <span>Bu dersi başarıyla tamamlayabilen öğrenciler;</span>
+                            <ul id="outcome">
+                                <li id="li0">Bilgisayar kaynaklarının kullanımındaki verimi değerlendirebilir,</li>
+                                <li id="li1">Bilgisayar kaynaklarının kulanımındaki kolaylığı değerlendirebilir,</li>
+                                <li id="li2">
+                                    Bilgisayarın tümden verimli kullanılması amacı ile bilgisayarın farklı
+                                    bileşenleri arasında geliştirilen mekanizmaları değerlendirebilir,
+                                </li>
+                                <li id="li3">
+                                    Sistem yazılımlarının geliştirilmesi konusundaki teknikleri anlayabilir,
+                                </li>
+                                <li id="li4">Kullanıcı programları ile sistem programlarını ayırdedebilir.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="sy-label">
+                            <strong>Course Description</strong>
+                        </td>
+                        <td id="dersTanım">
+                            İşletim Sistemi Yapıları, Süreç Yönetimi, Bellek Yönetimi, Dosya Sistemleri, Diskler,
+                            Giriş/Çıkış Sistemleri
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</body>
+
+</html>

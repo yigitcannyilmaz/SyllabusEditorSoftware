@@ -14,7 +14,7 @@ using System.Reflection;
 
 namespace SyllabusEditor
 {
-    
+
     public partial class Import : Form
     {
         //This code piece can calculate evaluation systems total number and weighting values but it does not work with every courses because of html codes are not proper.
@@ -22,7 +22,7 @@ namespace SyllabusEditor
 
         //public int textBoxTotalCalc(string type)
         //{
-            
+
         //    var textBoxesToSum = new[] { textBox47, textBox48, textBox49, textBox50, textBox51, textBox52, textBox53, textBox54, textBox55, textBox56, textBox57 };
 
         //    int summation = 0;
@@ -44,11 +44,11 @@ namespace SyllabusEditor
         //    }
 
         //    return summation;
-            
+
         //}
 
-       
-        
+
+
         public Import()
         {
             InitializeComponent();
@@ -371,7 +371,7 @@ namespace SyllabusEditor
             int tableEightTestThird = 0;
 
 
-            var labelArrayTableEight = new[] {label45, label46, label47, label48, label49, label50, label51, label52, label53, label54, label55, label56, label57 };
+            var labelArrayTableEight = new[] { label45, label46, label47, label48, label49, label50, label51, label52, label53, label54, label55, label56, label57 };
             var textboxArrayTableEight = new[] { textBox47, textBox48, textBox49, textBox50, textBox51, textBox52, textBox53, textBox54, textBox55, textBox56, textBox57, textBox58 };
             var textboxArrayTableEightSec = new[] { textBox59, textBox60, textBox61, textBox62, textBox63, textBox64, textBox65, textBox66, textBox67, textBox68, textBox69, textBox70 };
 
@@ -425,48 +425,17 @@ namespace SyllabusEditor
 
             }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             //textBox70.Text = textBoxTotalCalc("weighting").ToString();
             //textBox58.Text = textBoxTotalCalc("number").ToString();
 
-
-
         }
-
-
-
-
-
-
 
         private void Import_Load(object sender, EventArgs e)
         {
             LanguageComboBox.SelectedIndex = 0;
             WindowState = FormWindowState.Maximized;
             textBox58.Enabled = false;
-            textBox70.Enabled = false; 
+            textBox70.Enabled = false;
         }
 
         private void textBox32_TextChanged(object sender, EventArgs e)
@@ -519,7 +488,7 @@ namespace SyllabusEditor
         {
             Assembly asm = Assembly.GetExecutingAssembly();
             const string trSyllabusHTML = "SyllabusEditor.Files.trDefaultSyllabus.html";
-            const string enSyllabusHTML = "SyllabusEditor.Files.Default.html";
+            const string enSyllabusHTML = "SyllabusEditor.Files.enDefaultSyllabus.html";
 
             string courseNameWord = "";
             string courseCodeWord = "";
@@ -532,13 +501,138 @@ namespace SyllabusEditor
 
 
             String languageOfCourse = LanguageComboBox.SelectedItem.ToString();
-            //if (LanguageComboBox.SelectedIndex == 0)
-            //{
-            //    languageOfCourse = "en";
+            if (LanguageComboBox.SelectedIndex == 0)
+            {
+                languageOfCourse = "en";
+                using (Stream stream = asm.GetManifestResourceStream(enSyllabusHTML))
+                {
 
-            //}
-            //else
-            //{
+                    using (StreamReader reader = new StreamReader(stream))
+                    {
+                        MainHTMLTxtBox.Text = reader.ReadToEnd();
+                    }
+                }
+                var document2 = new HtmlAgilityPack.HtmlDocument();
+                document2.LoadHtml(MainHTMLTxtBox.Text);
+
+                var words = document2.DocumentNode?.SelectNodes("//*[@id='course_name']")?.Select(x => x.InnerText);
+                courseNameWord += words != null ? string.Join(" ", words) : String.Empty;
+                defaultTxtBox.Text = courseNameWord.Trim();
+                string html = MainHTMLTxtBox.Text;
+                string yHtml = "";
+                yHtml = html.Replace(defaultTxtBox.Text, textBox1.Text);
+                MainHTMLTxtBox.Text = yHtml;
+
+                words = document2.DocumentNode?.SelectNodes("//*[@id='course_code']")?.Select(x => x.InnerText);
+                courseCodeWord += words != null ? string.Join(" ", words) : String.Empty;
+                defaultTxtBox.Text = courseCodeWord.Trim();
+                yHtml = yHtml.Replace(defaultTxtBox.Text, textBox2.Text);
+                MainHTMLTxtBox.Text = yHtml;
+
+                words = document2.DocumentNode?.SelectNodes("//*[@id='semester']")?.Select(x => x.InnerText);
+                courseSemesterWord += words != null ? string.Join(" ", words) : String.Empty;
+                defaultTxtBox.Text = courseSemesterWord.Trim();
+                yHtml = yHtml.Replace(defaultTxtBox.Text, textBox3.Text);
+                MainHTMLTxtBox.Text = yHtml;
+
+                words = document2.DocumentNode?.SelectNodes("//*[@id='weekly_hours']")?.Select(x => x.InnerText);
+                courseWeeklyHourWord += words != null ? string.Join(" ", words) : String.Empty;
+                defaultTxtBox.Text = courseWeeklyHourWord.Trim();
+                yHtml = yHtml.Replace(defaultTxtBox.Text, textBox4.Text);
+                MainHTMLTxtBox.Text = yHtml;
+
+                words = document2.DocumentNode?.SelectNodes("//*[@id='app_hours']")?.Select(x => x.InnerText);
+                courseAppHoursWord += words != null ? string.Join(" ", words) : String.Empty;
+                defaultTxtBox.Text = courseAppHoursWord.Trim();
+                yHtml = yHtml.Replace(defaultTxtBox.Text, textBox5.Text);
+                MainHTMLTxtBox.Text = yHtml;
+
+                words = document2.DocumentNode?.SelectNodes("//*[@id='ieu_credit']")?.Select(x => x.InnerText);
+                courseIEUCredit += words != null ? string.Join(" ", words) : String.Empty;
+                defaultTxtBox.Text = courseIEUCredit.Trim();
+                yHtml = yHtml.Replace(defaultTxtBox.Text, textBox6.Text);
+                MainHTMLTxtBox.Text = yHtml;
+
+                words = document2.DocumentNode?.SelectNodes("//*[@id='ects_credit']")?.Select(x => x.InnerText);
+                courseECTSCredit += words != null ? string.Join(" ", words) : String.Empty;
+                defaultTxtBox.Text = courseECTSCredit.Trim();
+                yHtml = yHtml.Replace(defaultTxtBox.Text, textBox7.Text);
+                MainHTMLTxtBox.Text = yHtml;
+
+                words = document2.DocumentNode?.SelectNodes("//*[@id='pre_requisites']")?.Select(x => x.InnerText);
+                coursePrereq += words != null ? string.Join(" ", words) : String.Empty;
+                defaultTxtBox.Text = coursePrereq.Trim();
+                yHtml = yHtml.Replace(defaultTxtBox.Text, textBox8.Text);
+                MainHTMLTxtBox.Text = yHtml;
+
+                string courseType = "";
+                words = document2.DocumentNode?.SelectNodes("//*[@id='course_type']")?.Select(x => x.InnerText);
+                courseType += words != null ? string.Join(" ", words) : String.Empty;
+                defaultTxtBox.Text = courseType.Trim();
+                yHtml = yHtml.Replace(defaultTxtBox.Text, textBox10.Text);
+                MainHTMLTxtBox.Text = yHtml;
+
+                string courseLevel = "";
+                words = document2.DocumentNode?.SelectNodes("//*[@id='course_level']")?.Select(x => x.InnerText);
+                courseLevel += words != null ? string.Join(" ", words) : String.Empty;
+                defaultTxtBox.Text = courseLevel.Trim();
+                yHtml = yHtml.Replace(defaultTxtBox.Text, textBox11.Text);
+                MainHTMLTxtBox.Text = yHtml;
+
+                string coordinatorList = "";
+                words = document2.DocumentNode?.SelectNodes("//*[@id='coordinator_list']")?.Select(x => x.InnerText);
+                coordinatorList += words != null ? string.Join(" ", words) : String.Empty;
+                defaultTxtBox.Text = coordinatorList.Trim();
+                yHtml = yHtml.Replace(defaultTxtBox.Text, textBox12.Text);
+                MainHTMLTxtBox.Text = yHtml;
+
+                string lecturerList = "";
+                words = document2.DocumentNode?.SelectNodes("//*[@id='lecturer_list']")?.Select(x => x.InnerText);
+                lecturerList += words != null ? string.Join(" ", words) : String.Empty;
+                defaultTxtBox.Text = lecturerList.Trim();
+                yHtml = yHtml.Replace(defaultTxtBox.Text, textBox13.Text);
+                MainHTMLTxtBox.Text = yHtml;
+
+                string yardimciList = "";
+                words = document2.DocumentNode?.SelectNodes("//*[@id='yardimci_list']")?.Select(x => x.InnerText);
+                yardimciList += words != null ? string.Join(" ", words) : String.Empty;
+                defaultTxtBox.Text = yardimciList.Trim();
+                yHtml = yHtml.Replace(defaultTxtBox.Text, textBox14.Text);
+                MainHTMLTxtBox.Text = yHtml;
+
+                string dersAmac = "";
+                words = document2.DocumentNode?.SelectNodes("//*[@id='dersAmac']")?.Select(x => x.InnerText);
+                dersAmac += words != null ? string.Join(" ", words) : String.Empty;
+                defaultTxtBox.Text = dersAmac.Trim();
+                yHtml = yHtml.Replace(defaultTxtBox.Text, richTextBox1.Text);
+                MainHTMLTxtBox.Text = yHtml;
+
+                string outcome = "";
+                words = document2.DocumentNode?.SelectNodes("//*[@id='outcome']")?.Select(x => x.InnerText);
+                outcome += words != null ? string.Join(" ", words) : String.Empty;
+                defaultTxtBox.Text = outcome.Trim();
+                yHtml = yHtml.Replace(defaultTxtBox.Text, richTextBox2.Text);
+                MainHTMLTxtBox.Text = yHtml;
+
+                string dersTanım = "";
+                words = document2.DocumentNode?.SelectNodes("//*[@id='dersTanım']")?.Select(x => x.InnerText);
+                dersTanım += words != null ? string.Join(" ", words) : String.Empty;
+                defaultTxtBox.Text = dersTanım.Trim();
+                yHtml = yHtml.Replace(defaultTxtBox.Text, richTextBox3.Text);
+                MainHTMLTxtBox.Text = yHtml;
+
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    using (Stream save = File.Open(saveFileDialog.FileName, FileMode.OpenOrCreate))
+                    using (StreamWriter streamWriter = new StreamWriter(save))
+                    {
+                        streamWriter.Write(MainHTMLTxtBox.Text);
+                    }
+                }
+            }
+            else
+            {
                 languageOfCourse = "tr";
                 using (Stream stream = asm.GetManifestResourceStream(trSyllabusHTML))
                 {
@@ -666,7 +760,7 @@ namespace SyllabusEditor
                         streamWriter.Write(MainHTMLTxtBox.Text);
                     }
                 }
-            //}
+            }
         }
 
         private void defaultTxtBox_TextChanged(object sender, EventArgs e)

@@ -144,6 +144,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Files\trDefaultSyllabus.html" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Files\enDefaultSyllabus.html" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

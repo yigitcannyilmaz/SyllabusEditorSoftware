@@ -48,5 +48,11 @@ namespace SyllabusEditor
             Import import = new Import();
             import.Show();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.Show();
+        }
     }
 }

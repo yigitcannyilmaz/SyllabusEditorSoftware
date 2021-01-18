@@ -1,6 +1,6 @@
 # SyllabusEditorSoftware
 SE302 2020 Project about Syllabus Editor Software
 
-At the end of the project setup file link will publish below ;
+Setup link for our project.
 
-ASAP :)
+https://drive.google.com/drive/folders/1kBKwdcYecuBaPA2f5lt0ReYLoowd3DDJ?usp=sharing
